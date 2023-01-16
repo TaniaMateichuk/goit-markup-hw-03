@@ -1,11 +1,10 @@
 :root {
-    --dark-color-title: #2E2F42;
+    --primary-dark-color: #2E2F42;
     --primary-light-color: #FFFF;
     --main-color-text: #434455;
     --accent-color: #E7E9FC;
     --presed-state-btn: #404BBF;
     --primary-brand-color: #4D5AE5;
-    --hero-background-color: #2E2F42;
     --light-background-color: #F4F4FD;
 }
 
@@ -36,9 +35,14 @@ text-decoration: none;
 list-style: none;
 }
 
+.button {
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-    color: var(--dark-color-title);
+    color: var(--primary-dark-color);
     letter-spacing: 0.02em;
 }
 
@@ -48,10 +52,33 @@ body {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
+    /* text-align: center; */
+}
+
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--main-color-text);
 }
 
 /* ======================================HEADER============================= */
-
+.header-page {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--accent-color);
+}
 .header-wrapper {
     display: flex;
     justify-content: space-between;
@@ -73,7 +100,6 @@ body {
     line-height: 1.33;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-
     color: inherit;
     margin-right: 76px;
 }
@@ -111,10 +137,6 @@ body {
     margin-right: 40px;
 }
 
-.button {
-    border: 1px solid transparent;
-}
-
 
 .address-link {
     color: var(--main-color-text);
@@ -130,10 +152,14 @@ body {
 /* ======================================HEADER============================= */
 /* ======================================HERO============================= */
 .hero {
-    background: var(--hero-background-color);
-    text-align: center;
+    background: var(--primary-dark-color);
     padding-top: 188px;
     padding-bottom: 188px;
+}
+
+.hero-wrapper {
+    text-align: center;
+    
 }
 
 .hero-title { 
@@ -148,12 +174,10 @@ body {
 .hero-btn {
     color: var(--primary-light-color);
     background: var(--primary-brand-color);
-    /* font-family: inherit; */
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     padding: 16px 32px;
@@ -167,10 +191,7 @@ body {
 /* ======================================HERO============================= */
 /*======================================FEATURE=========================== */
 
-.feature {
-    padding-top: 120px;
-    padding-bottom: 120px;
-}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -186,56 +207,47 @@ body {
 
 .feature-list {
     display: flex;
+    /* flex-wrap: wrap; */
     gap: 24px;
-
 }
 
+.feature-item-list {
+    flex-basis: calc((100%-72px)/4);
+}
 
-    .feature-title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    margin-bottom: 8px;
+.feature-subtitle {
     
 }
 
 .feature-text {
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--main-color-text);
-    /* width: calc((100%-96px)/4); */
-    
+
 }
 /* ======================================FEATURE============================= */
 /* ======================================TEAM============================= */
 
-.team {
-    padding-top: 120px;
-    padding-bottom: 120px;
-}
-
 .team-title {
     font-size: 36px;
     line-height: 40px;
-    text-align: center;
     text-transform: capitalize;
-    padding-bottom: 72px;
+    text-align: center;
+    margin-bottom: 72px;
 }
 
 .team-list {
     display: flex;
+    justify-content: space-between;
     gap: 24px;
 }
-.team-subtitle {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
+.team-card {
+    padding: 32px 16px;
+    text-align: center;
 }
+
+.team-subtitle {
+}
+
 .team-text {
-    
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--main-color-text);
+
 }
 
 
@@ -247,25 +259,23 @@ body {
 }
 
 .work-title {
-font-size: 36px;
-line-height: 1.11;
-text-align: center;
-text-transform: capitalize;
-
-margin-bottom: 72px;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 72px;
 }
 
 /* ======================================WORK============================= */
 
 /* ======================================FOOTER============================= */
 .footer-page {
-    background: var(--main-color-text);
+    background: var(--primary-dark-color);
 }
-.footer-text {
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--accent-color);
 
+.footer-wrapper {
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .footer-logo {
@@ -276,33 +286,74 @@ margin-bottom: 72px;
     line-height: 1.67;
     letter-spacing: 0.03em;
     color: var(--light-background-color);
+    
 }
+.footer-text {
+    color: var(--accent-color);
+    width: 264px;
+    margin-top: 16px;
+}
+
 /* ======================================FOOTER============================= */
 /* ======================================PORTFOLIO============================= */
 
+.portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+
+.portfolio-filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 72px;
+}
+.portfolio-filter-list:not(:last-child) {
+    margin-right:  24px;
+}
+
 .portfolio-btn {
+    color: var(--primary-brand-color);
+    background: var(--light-background-color);
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    cursor: pointer;
-    color: var(--primary-brand-color);
-    background: var(--light-background-color);
+    padding: 12px 24px;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
     background: var(--presed-state-btn);
     color: var(--primary-light-color);
 }
+
+.disription-project-card {
+    border: 1px solid var(--accent-color);
+    border-top: none;
+    padding: 32px 16px;
+}
+.project-card-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 48px;
+    /* row-gap: 48px;
+    column-gap: 24px; */
+}
+
+/* .project-card-list {
+    flex-basis: calc(100%-48px)/3;
+} */
+
 .project-card-title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
+    margin-bottom: 8px;
 }
 .project-card-text {
     
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--main-color-text);
 }
