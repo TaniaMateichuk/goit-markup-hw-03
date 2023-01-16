@@ -9,12 +9,25 @@
     --light-background-color: #F4F4FD;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    color: var(--dark-color-title);
-    letter-spacing: 0.02em;
-
+h1,
+h2,
+h3,
+h4,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+img {
+    display: block;
+}
+
 .link {
 text-decoration: none;
 }
@@ -22,7 +35,37 @@ text-decoration: none;
 .list {
 list-style: none;
 }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--dark-color-title);
+    letter-spacing: 0.02em;
+}
+
+.container {
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* ======================================HEADER============================= */
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav {
+    display: flex;
+}
+
 .logo-header {
     font-family: 'Raleway', sans-serif ;
     font-weight: 800;
@@ -32,6 +75,7 @@ list-style: none;
     text-transform: uppercase;
 
     color: inherit;
+    margin-right: 76px;
 }
 
 .logo-brand {
@@ -51,9 +95,27 @@ list-style: none;
     color: var(--primary-brand-color);
 }
 
+.nav-list-item:not(:last-child) {
+    margin-right: 40px;
+}
+
 .address {
     font-style: normal;
 }
+
+.address-list {
+    display: flex;
+}
+
+.address-list-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.button {
+    border: 1px solid transparent;
+}
+
+
 .address-link {
     color: var(--main-color-text);
     font-size: 16px;
@@ -69,25 +131,32 @@ list-style: none;
 /* ======================================HERO============================= */
 .hero {
     background: var(--hero-background-color);
+    text-align: center;
+    padding-top: 188px;
+    padding-bottom: 188px;
 }
 
 .hero-title { 
+    color: var(--primary-light-color);
     font-size: 56px;
     line-height: 1.07;
-    text-align: center;
-    color: var(--primary-light-color);
+    margin-bottom: 48px;
+    
 
 }
 
 .hero-btn {
-    font-family: inherit;
+    color: var(--primary-light-color);
+    background: var(--primary-brand-color);
+    /* font-family: inherit; */
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
-    color: var(--primary-light-color);
-    background: var(--primary-brand-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 16px 32px;
     
 }
 
@@ -97,6 +166,11 @@ list-style: none;
 }
 /* ======================================HERO============================= */
 /*======================================FEATURE=========================== */
+
+.feature {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -110,26 +184,48 @@ list-style: none;
     overflow: hidden;    
 }
 
+.feature-list {
+    display: flex;
+    gap: 24px;
+
+}
+
+
     .feature-title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-}
-.feature-text {
+    margin-bottom: 8px;
     
+}
+
+.feature-text {
     font-size: 16px;
     line-height: 1.5;
     color: var(--main-color-text);
+    /* width: calc((100%-96px)/4); */
+    
 }
 /* ======================================FEATURE============================= */
 /* ======================================TEAM============================= */
+
+.team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
 .team-title {
     font-size: 36px;
     line-height: 40px;
     text-align: center;
     text-transform: capitalize;
+    padding-bottom: 72px;
 }
 
+.team-list {
+    display: flex;
+    gap: 24px;
+}
 .team-subtitle {
     font-weight: 500;
     font-size: 20px;
@@ -141,14 +237,22 @@ list-style: none;
     line-height: 1.5;
     color: var(--main-color-text);
 }
-/* ======================================TEAM============================= */
+
 
 /* ======================================WORK============================= */
+
+.work-list {
+    display: flex;
+    gap: 24px;
+}
+
 .work-title {
 font-size: 36px;
 line-height: 1.11;
 text-align: center;
 text-transform: capitalize;
+
+margin-bottom: 72px;
 }
 
 /* ======================================WORK============================= */
